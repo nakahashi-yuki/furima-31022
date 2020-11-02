@@ -1,7 +1,9 @@
-# テーブル設計
+# README
 
-## users テーブル
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
+<<<<<<< Updated upstream
 | Column     | Type    | Options     |
 | ---------- | ------- | ----------- |
 | nickname   | string  | null: false |
@@ -10,13 +12,15 @@
 | fullname   | string  | null: false |
 | name       | string  | null: false |
 | birthday   | integer | null: false |
+=======
+Things you may want to cover:
+>>>>>>> Stashed changes
 
-### Association
-- has_many :items
-- has_many :purchases
+* Ruby version
 
-## items テーブル
+* System dependencies
 
+<<<<<<< Updated upstream
 | Column            | Type    | Options     |
 | ----------------- | ------- | ----------- |
 | item_name         | string  | null: false |
@@ -27,26 +31,29 @@
 | shipment_source   | string  | null: false |
 | days              | string  | null: false |
 | selling_price     | string  | null: false |
+=======
+* Configuration
+>>>>>>> Stashed changes
 
-### Association
-- has_one :purchase
-- belongs_to :user
+* Database creation
 
-## purchases テーブル
+* Database initialization
 
+<<<<<<< Updated upstream
 | Column          | Type    | Options     |
 | --------------- | ------- | ----------- |
 | card_number     | integer | null: false |
 | expiration_date | integer | null: false |
 | security_code   | integer | null: false |
+=======
+* How to run the test suite
+>>>>>>> Stashed changes
 
-### Association
-- belongs_to :item
-- belongs_to :user
-- has_one :street_address
+* Services (job queues, cache servers, search engines, etc.)
 
-## street_addresses テーブル
+* Deployment instructions
 
+<<<<<<< Updated upstream
 | Column        | Type    | Options     |
 | ------------- | ------- | ----------- |
 | postal_code   | integer | null: false |
@@ -58,3 +65,6 @@
 
 ### Association
 - belongs_to :purchase
+=======
+* ...
+>>>>>>> Stashed changes
