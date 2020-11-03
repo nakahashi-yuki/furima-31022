@@ -1,54 +1,65 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
 | Column     | Type    | Options     |
 | ---------- | ------- | ----------- |
 | nickname   | string  | null: false |
 | email      | string  | null: false |
 | password   | string  | null: false |
-| fullname   | string  | null: false |
-| name       | string  | null: false |
-| birthday   | integer | null: false |
+| last_name  | string  | null: false |
+| first_name | string  | null: false |
+| L_name     | string  | null: false |
+| F_name     | string  | null: false |
+| birthday   | date    | null: false |
 
-* Ruby version
+### Association
+- has_many :items
+- has_many :purchases
 
-* System dependencies
+## items テーブル
 
-| Column            | Type    | Options     |
-| ----------------- | ------- | ----------- |
-| item_name         | string  | null: false |
-| item_explanation  | text    | null: false |
-| category          | string  | null: false |
-| product_condition | string  | null: false |
-| delivery_fee      | integer | null: false |
-| shipment_source   | string  | null: false |
-| days              | string  | null: false |
-| selling_price     | string  | null: false |
+| Column               | Type    | Options     |
+| -------------------- | ------- | ----------- |
+| name                 | string  | null: false |
+| explanation          | text    | null: false |
+| category_id          | integer | null: false |
+| product_condition_id | integer | null: false |
+| delivery_fee_id      | integer | null: false |
+| shipment_source_id   | integer | null: false |
+| days_id              | integer | null: false |
+| selling_price        | integer | null: false |
+| user_id              |         |             |
 
-* Database creation
+### Association
+- has_one :purchase
+- belongs_to :user
 
-* Database initialization
+## purchases テーブル
 
-| Column          | Type    | Options     |
-| --------------- | ------- | ----------- |
-| card_number     | integer | null: false |
-| expiration_date | integer | null: false |
-| security_code   | integer | null: false |
+| Column  | Type    | Options     |
+| ------- | ------- | ----------- |
+| user    | integer | null: false |
+| product | integer | null: false |
+| user_id |         |             |
+| item_id |         |             |
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- belongs_to :item
+- belongs_to :user
+- has_one :street_address
 
-* Deployment instructions
+## street_addresses テーブル
 
-| Column        | Type    | Options     |
-| ------------- | ------- | ----------- |
-| postal_code   | integer | null: false |
-| prefectures   | string  | null: false |
-| Municipality  | string  | null: false |
-| address       | string  | null: false |
-| building_name | string  | null: false |
-| phone_number  | integer | null: false |
+| Column         | Type    | Options     |
+| -------------- | ------- | ----------- |
+| postal_code    | string  | null: false |
+| prefectures_id | integer | null: false |
+| Municipality   | string  | null: false |
+| address        | string  | null: false |
+| building_name  | string  |             |
+| phone_number   | string  | null: false |
+| purchase_id    |         |             |
 
 ### Association
 - belongs_to :purchase
