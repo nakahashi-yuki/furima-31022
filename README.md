@@ -55,7 +55,7 @@
 | prefectures_id | integer    | null: false       |
 | Municipality   | string     | null: false       |
 | address        | string     | null: false       |
-| building_name  | string     | null: true        |
+| building_name  | string     |                   |
 | phone_number   | string     | null: false       |
 | purchase       | references | foreign_key: true |
 
