@@ -3,7 +3,6 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-<<<<<<< Updated upstream
 | Column     | Type    | Options     |
 | ---------- | ------- | ----------- |
 | nickname   | string  | null: false |
@@ -12,15 +11,11 @@ application up and running.
 | fullname   | string  | null: false |
 | name       | string  | null: false |
 | birthday   | integer | null: false |
-=======
-Things you may want to cover:
->>>>>>> Stashed changes
 
 * Ruby version
 
 * System dependencies
 
-<<<<<<< Updated upstream
 | Column            | Type    | Options     |
 | ----------------- | ------- | ----------- |
 | item_name         | string  | null: false |
@@ -31,29 +26,21 @@ Things you may want to cover:
 | shipment_source   | string  | null: false |
 | days              | string  | null: false |
 | selling_price     | string  | null: false |
-=======
-* Configuration
->>>>>>> Stashed changes
 
 * Database creation
 
 * Database initialization
 
-<<<<<<< Updated upstream
 | Column          | Type    | Options     |
 | --------------- | ------- | ----------- |
 | card_number     | integer | null: false |
 | expiration_date | integer | null: false |
 | security_code   | integer | null: false |
-=======
-* How to run the test suite
->>>>>>> Stashed changes
 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
 
-<<<<<<< Updated upstream
 | Column        | Type    | Options     |
 | ------------- | ------- | ----------- |
 | postal_code   | integer | null: false |
@@ -65,6 +52,3 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :purchase
-=======
-* ...
->>>>>>> Stashed changes
