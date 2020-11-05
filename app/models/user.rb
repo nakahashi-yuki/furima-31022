@@ -9,12 +9,14 @@ class User < ApplicationRecord
     validates :first_name, format: { with: /\A[ぁ-んァ-ン一-龥]/}
     validates :L_name, format: { with: /\A[ァ-ヶー－]+\z/}
     validates :F_name, format: { with: /\A[ァ-ヶー－]+\z/}
+    validates :nickname
+    validates :birthday
   end
-  PASSWORD_REGEX = /\A[a-zA-Z0-9]+\z/.freeze
-  validates :password, format: { with: PASSWORD_REGEX }
-  validates :encrypted_password, presence: true
-  validates :nickname, presence: true
-  validates :birthday, presence: true
+  # PASSWORD_REGEX = /\A[a-zA-Z0-9]+\z/.freeze
+  # validates :password, format: { with: PASSWORD_REGEX }, presence: true
 
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}+\z/i
+  validates :password, format: { with: VALID_PASSWORD_REGEX }
+  validates :password_confirmation, presence: true
 
 end
