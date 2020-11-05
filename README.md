@@ -29,7 +29,7 @@
 | shipment_source_id   | integer    | null: false       |
 | days_id              | integer    | null: false       |
 | selling_price        | integer    | null: false       |
-| user_id              | references | foreign_key: true |
+| user                 | references | foreign_key: true |
 
 ### Association
 - has_one :purchase
@@ -39,10 +39,8 @@
 
 | Column  | Type       | Options           |
 | ------- | ---------- | ----------------- |
-| user    | integer    | null: false       |
-| product | integer    | null: false       |
-| user_id | references | foreign_key: true |
-| item_id | references | foreign_key: true |
+| user    | references | foreign_key: true |
+| item    | references | foreign_key: true |
 
 ### Association
 - belongs_to :item
@@ -57,9 +55,9 @@
 | prefectures_id | integer    | null: false       |
 | Municipality   | string     | null: false       |
 | address        | string     | null: false       |
-| building_name  | string     | null: true        |
+| building_name  | string     |                   |
 | phone_number   | string     | null: false       |
-| purchase_id    | references | foreign_key: true |
+| purchase       | references | foreign_key: true |
 
 ### Association
 - belongs_to :purchase
