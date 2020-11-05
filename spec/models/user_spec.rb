@@ -131,19 +131,31 @@ RSpec.describe User, type: :model do
     end
 
     #18
-    it "ユーザー本名は、全角（漢字・ひらがな・カタカナ）以外は登録できない" do
+    it "ユーザー本名の苗字は、全角（漢字・ひらがな・カタカナ）以外は登録できない" do
       @user.last_name = "aaa"
-      @user.first_name = "bbb"
       @user.valid?
-      expect(@user.errors.full_messages).to include("Last name is invalid", "First name is invalid")
+      expect(@user.errors.full_messages).to include("Last name is invalid")
     end
 
     #19
+    it "ユーザー本名の名前は、全角（漢字・ひらがな・カタカナ）以外は登録できない" do
+      @user.first_name = "bbb"
+      @user.valid?
+      expect(@user.errors.full_messages).to include("First name is invalid")
+    end
+
+    #20
     it "ユーザー本名のフリガナは、全角（カタカナ）以外は登録できない" do
       @user.L_name = "あああ"
+      @user.valid?
+      expect(@user.errors.full_messages).to include("L name is invalid")
+    end
+    
+    #21
+    it "ユーザー本名のフリガナは、全角（カタカナ）以外は登録できない" do
       @user.F_name = "嗚呼阿"
       @user.valid?
-      expect(@user.errors.full_messages).to include("L name is invalid", "F name is invalid")
+      expect(@user.errors.full_messages).to include("F name is invalid")
     end
   end
 
