@@ -79,7 +79,6 @@ RSpec.describe Item, type: :model do
     it "selling_priceが9,999,999円以上であれば登録できないこと" do
       @item.selling_price = "10000000"
       @item.valid?
-      binding.pry
       expect(@item.errors.full_messages).to include("Selling price must be less than or equal to 9999999")
     end
   end
