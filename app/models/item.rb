@@ -6,13 +6,13 @@ class Item < ApplicationRecord
   has_one_attached :image
 
   with_options presence: true do
-    validates :name, :explanation
+    validates :name, :explanation, :image
     validates :category_id, numericality: { other_than: 0 }
     validates :product_condition_id, numericality: { other_than: 0 }
     validates :delivery_fee_id, numericality: { other_than: 0 }
     validates :shipment_source_id, numericality: { other_than: 0 }
     validates :days_id, numericality: { other_than: 0 }
-    validates :selling_price, 
+    validates :selling_price,  numericality: {only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999}
   end
 
 
