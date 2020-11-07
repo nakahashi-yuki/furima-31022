@@ -12,7 +12,7 @@ class Item < ApplicationRecord
       validates :product_condition_id
       validates :delivery_fee_id
       validates :shipment_source_id
-      validates :days_id
+      validates :day_id
     end
     validates :selling_price,  numericality: {only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999}
   end

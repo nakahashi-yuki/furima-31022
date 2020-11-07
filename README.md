@@ -27,7 +27,7 @@
 | product_condition_id | integer    | null: false       |
 | delivery_fee_id      | integer    | null: false       |
 | shipment_source_id   | integer    | null: false       |
-| days_id              | integer    | null: false       |
+| day_id              | integer    | null: false       |
 | selling_price        | integer    | null: false       |
 | user                 | references | foreign_key: true |
 

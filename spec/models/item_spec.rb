@@ -8,7 +8,7 @@ RSpec.describe Item, type: :model do
     end
 
     #1
-    it "image,name,explanation,category,product_condition,delivery_fee,shipment_source,days,selling_priceがあれば出品できる" do
+    it "image,name,explanation,category,product_condition,delivery_fee,shipment_source,day,selling_priceがあれば出品できる" do
       expect(@item).to be_valid
     end
 
@@ -62,10 +62,10 @@ RSpec.describe Item, type: :model do
     end
 
     #9
-    it "daysを選択していない場合は登録できないこと" do
-      @item.days_id = 0
+    it "dayを選択していない場合は登録できないこと" do
+      @item.day_id = 0
       @item.valid?
-      expect(@item.errors.full_messages).to include("Days must be other than 0")
+      expect(@item.errors.full_messages).to include("Day must be other than 0")
     end
 
     #10
