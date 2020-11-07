@@ -4,19 +4,18 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-    NICKNAME_REGEX = /\A[ぁ-んァ-ン一-龥]/
-    NAME_REGEX = /\A[ァ-ヶー－]+\z/
+  NICKNAME_REGEX = /\A[ぁ-んァ-ン一-龥]/.freeze
+  NAME_REGEX = /\A[ァ-ヶー－]+\z/.freeze
   with_options presence: true do
-    validates :last_name, format: { with: NICKNAME_REGEX}
-    validates :first_name, format: { with: NICKNAME_REGEX}
-    validates :L_name, format: { with: NAME_REGEX}
-    validates :F_name, format: { with: NAME_REGEX}
+    validates :last_name, format: { with: NICKNAME_REGEX }
+    validates :first_name, format: { with: NICKNAME_REGEX }
+    validates :L_name, format: { with: NAME_REGEX }
+    validates :F_name, format: { with: NAME_REGEX }
     validates :nickname, :birthday, :password_confirmation
   end
   # PASSWORD_REGEX = /\A[a-zA-Z0-9]+\z/.freeze
   # validates :password, format: { with: PASSWORD_REGEX }, presence: true
 
-  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}+\z/i
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}+\z/i.freeze
   validates :password, format: { with: VALID_PASSWORD_REGEX }
-
 end
