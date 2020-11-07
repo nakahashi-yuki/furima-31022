@@ -14,11 +14,8 @@ class Item < ApplicationRecord
       validates :shipment_source_id
       validates :day_id
     end
-    validates :selling_price,  numericality: {only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999}
+    validates :selling_price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
   end
-
-
-
 
   include ActiveHash::Associations
   belongs_to_active_hash :category
