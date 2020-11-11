@@ -80,7 +80,6 @@ RSpec.describe PurchasesStreetAddress, type: :model do
     it 'phone_numberにハイフンをつけていた場合、購入できない。' do
       @purchases.phone_number = '090-3333-6666'
       @purchases.valid?
-      binding.pry
       expect(@purchases.errors.full_messages).to include('Phone number is invalid.')
     end
   end
