@@ -21,9 +21,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show
-  end
-
   def edit
     # URL直とび防止の条件分岐
     redirect_to root_path unless current_user == @item.user

@@ -27,7 +27,7 @@
 | product_condition_id | integer    | null: false       |
 | delivery_fee_id      | integer    | null: false       |
 | shipment_source_id   | integer    | null: false       |
-| day_id              | integer    | null: false       |
+| day_id               | integer    | null: false       |
 | selling_price        | integer    | null: false       |
 | user                 | references | foreign_key: true |
 
@@ -47,13 +47,13 @@
 - belongs_to :user
 - has_one :street_address
 
-## street_addresses テーブル
+## street_address テーブル
 
 | Column         | Type       | Options           |
 | -------------- | ---------- | ----------------- |
 | postal_code    | string     | null: false       |
 | prefectures_id | integer    | null: false       |
-| Municipality   | string     | null: false       |
+| municipality   | string     | null: false       |
 | address        | string     | null: false       |
 | building_name  | string     |                   |
 | phone_number   | string     | null: false       |
