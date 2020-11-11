@@ -6,7 +6,7 @@ class PurchasesController < ApplicationController
     @item = Item.find(params[:item_id])
     # purchases_street_addressの空を生成。＝＞ ここに入力して直接createへ！
     @purchases = PurchasesStreetAddress.new
-    if current_user.id == @item.user_id
+    if current_user.id == @item.user_id || @item.purchase.present?
       redirect_to root_path
     else
       render :index
