@@ -61,3 +61,12 @@
 
 ### Association
 - belongs_to :purchase
+
+
+## comments テーブル
+
+| Column   | Type       | Options           |
+| -------- | ---------- | ----------------- |
+| comments | text       |                   |
+| item_id  | references | foreign_key: true |
+| user_id  | references | foreign_key: true |

@@ -1,6 +1,8 @@
 class PurchasesController < ApplicationController
   before_action :authenticate_user!
 
+  # 購入画面
+  
   def index
     # 購入しようとしている商品のレコードを取得。
     @item = Item.find(params[:item_id])
