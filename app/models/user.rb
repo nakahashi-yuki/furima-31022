@@ -16,10 +16,10 @@ class User < ApplicationRecord
   # PASSWORD_REGEX = /\A[a-zA-Z0-9]+\z/.freeze
   # validates :password, format: { with: PASSWORD_REGEX }, presence: true
 
-  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}+\z/i.freeze
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-zA-Z])(?=.*?\d)[a-zA-Z\d]{6,}\z/
   validates :password, format: { with: VALID_PASSWORD_REGEX }
 
-  has_many :items
+  has_many :items 
   has_many :purchases
   has_many :comments
 end

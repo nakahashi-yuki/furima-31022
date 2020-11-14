@@ -55,16 +55,15 @@ RSpec.describe User, type: :model do
       expect(@user).to be_valid
     end
 
-    # 8
+    # 8←
     it 'passwordが６文字以上でも、半角英語のみでは登録できない' do
       @user.password = 'yatuhashi'
       @user.password_confirmation = 'yatuhashi'
       @user.valid?
-
       expect(@user.errors.full_messages).to include('Password is invalid')
     end
 
-    # 9
+    # 9←
     it 'passwordが６文字以上でも、数字のみでは登録できない' do
       @user.password = '123456'
       @user.password_confirmation = '123456'
