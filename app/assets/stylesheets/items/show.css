@@ -147,12 +147,29 @@
   text-align: center;
 }
 
+.comment-view {
+  background-color: #CCffff;
+  border: 2px solid #66FFFF;
+  margin-top: 5px;
+}
+
+.view {
+  height: 320px;
+  width: 100%;
+  overflow: scroll;
+}
+
 .comment-text {
   width: 100%;
   height: 100px;
   padding: 10px;
   border: solid 2px #dedede;
   resize: none;
+}
+
+.comment-user {
+  color: darkgray;
+  font-size: 5px;
 }
 
 .comment-warn {
@@ -181,6 +198,16 @@
 
 .comment-flag-icon {
   margin: 10px 5px 0 0;
+}
+
+.comment{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.new-comment {
+  background-color: gold;
 }
 
 .links {

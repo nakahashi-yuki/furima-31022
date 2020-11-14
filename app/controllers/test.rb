@@ -1,10 +1,10 @@
-{"authenticity_token"=>"EbxuW6xAmYNqmYOOp5Y6KYKJqFGkLeM3dlSeM8WGLhuiwpyXJeU2n3fUKMkUOBmJR8d3Lo2hdwQ+Wa8UQi2x4A=="
-   "purchases_street_address"=>{"postal_code"=>"123-1234"
-                                "prefectures_id"=>"1"
-                                "municipality"=>"あ"
-                                "address"=>"あ"
-                                "building_name"=>""
-                                "phone_number"=>"09011112222"}
-    "token"=>"tok_07e81e2459f7f467d1f9f937550a"
-    "item_id"=>"2"
-}
+# {"authenticity_token"=>"EbxuW6xAmYNqmYOOp5Y6KYKJqFGkLeM3dlSeM8WGLhuiwpyXJeU2n3fUKMkUOBmJR8d3Lo2hdwQ+Wa8UQi2x4A=="
+#    "purchases_street_address"=>{"postal_code"=>"123-1234"
+#                                 "prefectures_id"=>"1"
+#                                 "municipality"=>"あ"
+#                                 "address"=>"あ"
+#                                 "building_name"=>""
+#                                 "phone_number"=>"09011112222"}
+#     "token"=>"tok_07e81e2459f7f467d1f9f937550a"
+#     "item_id"=>"2"
+# }
