@@ -22,6 +22,12 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+    @commented = Comment.all
+    @comments = Comment.new
+    @comment = @item.comments.includes(:user)
+  end
+
   def edit
     # URL直とび防止の条件分岐
     redirect_to root_path unless current_user == @item.user

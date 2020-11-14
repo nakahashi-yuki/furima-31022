@@ -32,6 +32,7 @@ class PurchasesController < ApplicationController
   def purchases_params
     # params=大箱、require=中箱、permit=小箱。merge＝大箱のなかに入りつつ、中箱には入っていないやつ。参考: test.rb
     params.require(:purchases_street_address).permit(:postal_code, :prefectures_id, :municipality, :address, :building_name, :phone_number).merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
+    #                                   ↑item_id: params[:item_id]の記述の意味。
     # params.permit(:postal_code, :prefectures_id, :municipality, :address, :building_name,:phone_number, :token, :item_id).merge( user_id: current_user.id)
     # params.require(:purchase).permit(:purchases).merge(token: params[:token])
   end
