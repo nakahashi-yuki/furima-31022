@@ -52,6 +52,7 @@ production:
   database: furima_31022_production
   username: furima_31022
   password: <%= ENV['FURIMA_31022_DATABASE_PASSWORD'] %>
+  # この記述は付け足さないと、DBが読み込まれずデプロイできない。
   adapter: mysql12
   encoding: utf8
   pool: 15
