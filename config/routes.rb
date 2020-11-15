@@ -6,4 +6,4 @@ Rails.application.routes.draw do
     resources :purchases, only: [:index, :create]
     resources :comments, only: [:create]
   end
-end
+end 
